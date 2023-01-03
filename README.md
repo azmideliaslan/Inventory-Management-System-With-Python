@@ -30,13 +30,6 @@ It accepts data into the following fields, from the user:
 - **Tkinter**   | library for creating graphical user interfaces (GUIs) in Python.
 - **ttkthemes** | third-party library that provides additional themes and styles for the Tkinter library
 
-### Plans For The Next Update
-- UI design improvement
-- Instantly transfer the selected product quantities to the employment contract by creating an excel file
-- Searching area with name
-- Filtering by brand | category
-- No stock alert
-
 ### Changelog v1.0 - 27.12.22
 #### First Commit
 - Main program created
