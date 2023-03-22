@@ -28,6 +28,7 @@ It accepts data into the following fields, from the user:
 - **sqlite3**   | library for working with SQLite databases in Python.
 - **openpyxl**  | library for reading and writing Excel files in Python
 - **Tkinter**   | library for creating graphical user interfaces (GUIs) in Python.
+- (u can find guide link here https://realpython.com/python-gui-tkinter/ )
 - **ttkthemes** | third-party library that provides additional themes and styles for the Tkinter library
 
 ### Changelog v1.0 - 27.12.22
