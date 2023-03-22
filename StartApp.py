@@ -45,8 +45,6 @@ progress.place(x=25, y=390)
 exit_btn = Button(text='x', bg='red', command=lambda: exit_window(), bd=0, font=("arial", 16, "bold"),
                   activebackground='#fd6a36', fg='white')
 exit_btn.place(x=570, y=0)
-
-
 def exit_window():
     sys.exit(root.destroy())
 
