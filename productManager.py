@@ -18,7 +18,6 @@ import os
 if __name__ == '__main__':
 
     db = Database("products.db")
-
     def populate_list():
         product_list_listbox.delete(0, tk.END)
         for num, row in enumerate(db.fetch_all_rows()):
@@ -28,22 +27,15 @@ if __name__ == '__main__':
             string = str(num + 1) + string
             product_list_listbox.insert(tk.END, string)
 
-
     # Function to bind listbox
-
     def select_item(event):
         try:
             global selected_item
-
-            # To query the selection, use curselection method. It returns a list of item indexes
+            # Use the curselection technique to question the selection. A list of item indexes is returned
             index = product_list_listbox.curselection()[0]
-
             selected_item = product_list_listbox.get(index)
-
             selected_item = selected_item.split("  |  ")
-
             selected_item = db.fetch_by_product_id(selected_item[1])
-
             clear_input()
 
             product_id_entry.insert(0, selected_item[0][1])
@@ -150,12 +142,9 @@ if __name__ == '__main__':
         root, text="Status: ", bg="#ffb5c5", anchor="w", font=("arial", 10)
     )
     statusbar_label.grid(row=3, column=0, sticky="we", padx=10)
-
-
     # ========================#
 
     # Button Functions
-
     def add_item():
         if (
                 product_id_var.get() == ""
@@ -185,7 +174,24 @@ if __name__ == '__main__':
 
 
     def update_item():
-        if product_id_var.get() != "" and product_category_var.get() != "" and product_brand_var.get() != "" and product_name_var.get() != "" and product_stock_var.get() != "" and cost_price_var.get() != "" and selling_price_var.get() != "":
+        if(
+                product_id_var.get() != ""
+                and product_category_var.get() != ""
+                and product_brand_var.get() != ""
+                and product_name_var.get() != ""
+                and product_stock_var.get() != ""
+                and cost_price_var.get() != ""
+                and selling_price_var.get() != ""):
+            db.update(
+                selected_item[0][0],
+                product_id_var.get(),
+                product_category_var.get(),
+                product_brand_var.get(),
+                product_name_var.get(),
+                product_stock_var.get(),
+                cost_price_var.get(),
+                selling_price_var.get(),
+            )
             populate_list()
             statusbar_label["text"] = "Status: Product updated successfully"
             statusbar_label.config(bg='green',fg='white')

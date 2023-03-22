@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Dec 27 04:23:11 2022
-
-
 @author: Azmi Deliaslan
 """
 #First Screen
@@ -56,7 +54,6 @@ def top():
     root.withdraw()
     os.system("python productManager.py")
     root.destroy()
-
 i = 0
 
 def loadsystem():
@@ -71,8 +68,6 @@ def loadsystem():
         i += 1
     else:
         top()
-
-loadsystem()
 
 loadsystem()
 root.mainloop()
