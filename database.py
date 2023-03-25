@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Dec 27 04:00:03 2022
-
-
 @author: Azmi Deliaslan
 """
 import sqlite3
