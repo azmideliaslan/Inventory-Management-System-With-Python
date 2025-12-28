@@ -23,7 +23,7 @@ It accepts data into the following fields, from the user:
 - Cost Price
 - Selling Price
 
-### Libraries Used 
+### Libraries Used a
 
 - **sqlite3**   | library for working with SQLite databases in Python.
 - **openpyxl**  | library for reading and writing Excel files in Python
